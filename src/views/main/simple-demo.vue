@@ -99,6 +99,14 @@
         </el-date-picker>
 
         <el-date-picker
+            v-model="dateValue"
+            type="datetime"
+            format="yyyy-MM-dd HH:mm:ss"
+            placeholder="选择时间"
+            :picker-options="pickerOptions">
+        </el-date-picker>
+
+        <el-date-picker
             v-model="dateTimeValue"
             type="datetimerange"
             format="yyyy-MM-dd HH:mm:ss"
@@ -360,7 +368,15 @@
                 dateValue: '',
                 dateTimeValue: '',
                 dialogImageUrl: '',
-                dialogVisible: false
+                dialogVisible: false,
+                pickerOptions: {
+                    shortcuts: [{
+                        text: '00:00:00',
+                        onClick(vm) {
+                            vm.visibleTime = '00:00:00';
+                        }
+                    }]
+                }
             }
         },
         methods: {

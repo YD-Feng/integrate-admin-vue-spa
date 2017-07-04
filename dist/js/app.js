@@ -39,7 +39,7 @@ webpackJsonp([0],{
 	window.router = new VueRouter({
 	    saveScrollPosition: true,
 	    transitionOnLoad: true,
-	    routes: __webpack_require__(72)
+	    routes: __webpack_require__(73)
 	});
 
 	router.beforeEach(function (to, from, next) {
@@ -56,10 +56,10 @@ webpackJsonp([0],{
 
 	window.store = new Vuex.Store({
 	    modules: {
-	        tips: __webpack_require__(85),
-	        loading: __webpack_require__(86),
-	        header: __webpack_require__(87),
-	        footer: __webpack_require__(88)
+	        tips: __webpack_require__(86),
+	        loading: __webpack_require__(87),
+	        header: __webpack_require__(88),
+	        footer: __webpack_require__(89)
 	    },
 	    strict: false,
 	    middlewares: [VuexLogger()]
@@ -125,7 +125,7 @@ webpackJsonp([0],{
 
 /***/ }),
 
-/***/ 72:
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -135,7 +135,7 @@ webpackJsonp([0],{
 	    name: 'main',
 	    component: function component(resolve) {
 	        __webpack_require__.e/* nsure */(1, function (require) {
-	            resolve(__webpack_require__(73));
+	            resolve(__webpack_require__(74));
 	        });
 	    }
 	}, {
@@ -143,7 +143,7 @@ webpackJsonp([0],{
 	    name: 'main',
 	    component: function component(resolve) {
 	        __webpack_require__.e/* nsure */(1, function (require) {
-	            resolve(__webpack_require__(73));
+	            resolve(__webpack_require__(74));
 	        });
 	    },
 	    children: [{
@@ -151,7 +151,7 @@ webpackJsonp([0],{
 	        name: 'simple-demo',
 	        component: function component(resolve) {
 	            __webpack_require__.e/* nsure */(2, function (require) {
-	                resolve(__webpack_require__(76));
+	                resolve(__webpack_require__(77));
 	            });
 	        }
 	    }, {
@@ -159,7 +159,7 @@ webpackJsonp([0],{
 	        name: 'form-demo',
 	        component: function component(resolve) {
 	            __webpack_require__.e/* nsure */(3, function (require) {
-	                resolve(__webpack_require__(79));
+	                resolve(__webpack_require__(80));
 	            });
 	        }
 	    }, {
@@ -167,7 +167,7 @@ webpackJsonp([0],{
 	        name: 'list-demo',
 	        component: function component(resolve) {
 	            __webpack_require__.e/* nsure */(4, function (require) {
-	                resolve(__webpack_require__(82));
+	                resolve(__webpack_require__(83));
 	            });
 	        }
 	    }]
@@ -175,7 +175,7 @@ webpackJsonp([0],{
 
 /***/ }),
 
-/***/ 85:
+/***/ 86:
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -223,7 +223,7 @@ webpackJsonp([0],{
 
 /***/ }),
 
-/***/ 86:
+/***/ 87:
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -253,7 +253,7 @@ webpackJsonp([0],{
 
 /***/ }),
 
-/***/ 87:
+/***/ 88:
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -293,7 +293,7 @@ webpackJsonp([0],{
 
 /***/ }),
 
-/***/ 88:
+/***/ 89:
 /***/ (function(module, exports) {
 
 	'use strict';
