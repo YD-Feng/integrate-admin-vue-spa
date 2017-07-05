@@ -5,6 +5,10 @@
             <el-breadcrumb-item>常规组件示例</el-breadcrumb-item>
         </el-breadcrumb>
 
+        <schedule :schedule-options="scheduleOptions"></schedule>
+
+        <br><br>
+
         <el-radio class="radio" v-model="radio" label="1">备选项</el-radio>
         <el-radio class="radio" v-model="radio" label="2">备选项</el-radio>
 
@@ -376,6 +380,12 @@
                             vm.visibleTime = '00:00:00';
                         }
                     }]
+                },
+                scheduleOptions: {
+                    list: ['2017-07-03', '2017-07-04', '2017-07-05', '2017-07-06', '2017-07-08'],
+                    onClick(dateStr, scheduleVm) {
+                        //todo..
+                    }
                 }
             }
         },
@@ -408,6 +418,9 @@
                 this.dialogImageUrl = file.url;
                 this.dialogVisible = true;
             }
+        },
+        components: {
+            schedule: require('../../components/schedule.vue')
         }
     };
 </script>
