@@ -7,8 +7,8 @@
             <el-breadcrumb-item v-if="pageType == 2">邀请开通</el-breadcrumb-item>
         </el-breadcrumb>
 
-        <search-list v-if="pageType == 1"></search-list>
-        <invite-custom v-if="pageType == 2" :custom-id="curCustomId"></invite-custom>
+        <search-list v-show="pageType == 1"></search-list>
+        <invite-custom v-show="pageType == 2" :custom-id="curCustomId"></invite-custom>
     </div>
 </template>
 
@@ -23,8 +23,6 @@
                 pageType: 1,
                 curCustomId: ''
             }
-        },
-        methods: {
         },
         components: {
             searchList: require('./store-account-info/search-list.vue'),

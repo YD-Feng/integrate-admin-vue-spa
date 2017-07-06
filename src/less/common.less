@@ -6,11 +6,13 @@ html,body{
     font-size: 12px;
 }
 
+//element reset
 .custom-style{
     .el-button {
         padding: 8px 10px;
         font-size: 12px;
         border-radius: 4px;
+        vertical-align: middle;
     }
 
     .el-radio__label{
@@ -172,6 +174,7 @@ html,body{
     }
 }
 
+//公共样式
 .cm-form{
     width: 500px;
     .el-checkbox, .el-radio{
@@ -203,6 +206,39 @@ html,body{
         }
         .el-form-item__label{
             padding-bottom: 4px;
+        }
+    }
+}
+
+.cm-inner-page{
+    .top-btn-wrap{
+        text-align: right;
+        margin-top: -51px;
+        line-height: 30px;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+    .form-wrap{
+        padding: 25px 25px 15px 25px;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        background-color: #fbfbfb;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+        .title{
+            color: #009999;
+            font-size: 14px;
+            padding-bottom: 15px;
+        }
+        .title-blue{
+            color: #1970a9;
+            font-weight: bold;
+        }
+        .line{
+            height: 0;
+            overflow: hidden;
+            border-bottom: 1px dashed #e2e2e2;
+            margin-bottom: 15px;
         }
     }
 }
@@ -286,4 +322,10 @@ html,body{
         font-size: 0;
         height: 0;
     }
+}
+
+//弹出框页面外壳
+.dialog-page-wrap{
+    max-height: 570px;
+    overflow: auto;
 }

@@ -1,1 +1,496 @@
-webpackJsonp([3],{111:function(a){a.exports={render:function(){var a=this,b=a.$createElement,c=a._self._c||b;return c('div',[c('el-breadcrumb',[c('el-breadcrumb-item',[a._v('\u8FD0\u8425\u7CFB\u7EDF')]),a._v(' '),c('el-breadcrumb-item',[a._v('\u5217\u8868\u9875\u793A\u4F8B')])],1),a._v(' '),c('div',{staticClass:'cm-form cm-form-inline'},[c('el-form',{staticClass:'demo-form-inline',attrs:{inline:!0,model:a.formInline}},[c('el-form-item',{attrs:{label:'\u5BA1\u6279\u4EBA'}},[c('el-input',{attrs:{placeholder:'\u5BA1\u6279\u4EBA'},model:{value:a.formInline.user,callback:function(b){a.formInline.user=b},expression:'formInline.user'}})],1),a._v(' '),c('el-form-item',{attrs:{label:'\u6D3B\u52A8\u533A\u57DF'}},[c('el-select',{attrs:{placeholder:'\u6D3B\u52A8\u533A\u57DF'},model:{value:a.formInline.region,callback:function(b){a.formInline.region=b},expression:'formInline.region'}},[c('el-option',{attrs:{label:'\u533A\u57DF\u4E00',value:'shanghai'}}),a._v(' '),c('el-option',{attrs:{label:'\u533A\u57DF\u4E8C',value:'beijing'}})],1)],1),c('el-form-item',[c('el-button',{attrs:{type:'primary'},on:{click:a.onSubmit}},[a._v('\u67E5\u8BE2')])],1)],1)],1),a._v(' '),c('el-table',{staticStyle:{width:'100%'},attrs:{data:a.tableData,border:'',height:'200'}},[c('el-table-column',{attrs:{fixed:'left',type:'selection',width:'40'}}),a._v(' '),c('el-table-column',{attrs:{prop:'date',label:'\u65E5\u671F',"min-width":'120'}}),a._v(' '),c('el-table-column',{attrs:{prop:'name',label:'\u59D3\u540D'}}),a._v(' '),c('el-table-column',{attrs:{prop:'province',label:'\u7701\u4EFD'}}),a._v(' '),c('el-table-column',{attrs:{prop:'city',label:'\u5E02\u533A'}}),a._v(' '),c('el-table-column',{attrs:{prop:'address',label:'\u5730\u5740',"min-width":'300'}}),a._v(' '),c('el-table-column',{attrs:{prop:'zip',label:'\u90AE\u7F16'}}),a._v(' '),c('el-table-column',{attrs:{prop:'zip',label:'\u90AE\u7F16'}}),a._v(' '),c('el-table-column',{attrs:{prop:'zip',label:'\u90AE\u7F16'}}),a._v(' '),c('el-table-column',{attrs:{prop:'zip',label:'\u90AE\u7F16'}}),a._v(' '),c('el-table-column',{attrs:{prop:'zip',label:'\u90AE\u7F16'}}),a._v(' '),c('el-table-column',{attrs:{prop:'zip',label:'\u90AE\u7F16'}}),a._v(' '),c('el-table-column',{attrs:{fixed:'right',label:'\u64CD\u4F5C',align:'center',width:'120'},scopedSlots:a._u([{key:'default',fn:function(){return[c('el-button',{attrs:{type:'text',size:'small'},on:{click:a.handleClick}},[a._v('\u67E5\u770B')]),a._v(' '),c('el-button',{attrs:{type:'text',size:'small'}},[a._v('\u7F16\u8F91')])]}}])})],1),a._v(' '),c('div',{staticClass:'cm-pagination-wrap'},[c('el-pagination',{attrs:{"current-page":a.currentPage,"page-sizes":[100,200,300,400],"page-size":a.pageSize,total:a.total,layout:'total, sizes, prev, pager, next, jumper'},on:{"size-change":a.handleSizeChange,"current-change":a.handleCurrentChange}})],1)],1)},staticRenderFns:[]},a.exports.render._withStripped=!0,!1},34:function(a,b,c){var d=c(91)(c(98),c(111),null,null,null);d.options.__file='F:\\code\\@integrate-admin-vue-spa\\src\\views\\main\\list-demo.vue',d.esModule&&Object.keys(d.esModule).some(function(a){return'default'!==a&&'__'!==a.substr(0,2)})&&console.error('named exports are not supported in *.vue files.'),d.options.functional&&console.error('[vue-loader] list-demo.vue: functional components are not supported with templates, they should use render functions.'),!1,a.exports=d.exports},91:function(a){a.exports=function(a,b,c,d,e){var f,g=a=a||{},h=typeof a.default;('object'==h||'function'==h)&&(f=a,g=a.default);var i='function'==typeof g?g.options:g;b&&(i.render=b.render,i.staticRenderFns=b.staticRenderFns),d&&(i._scopeId=d);var j;if(e?(j=function(a){a=a||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,a||'undefined'==typeof __VUE_SSR_CONTEXT__||(a=__VUE_SSR_CONTEXT__),c&&c.call(this,a),a&&a._registeredComponents&&a._registeredComponents.add(e)},i._ssrRegister=j):c&&(j=c),j){var k=i.functional,l=k?i.render:i.beforeCreate;k?i.render=function(a,b){return j.call(b),l(a,b)}:i.beforeCreate=l?[].concat(l,j):[j]}return{esModule:f,exports:g,options:i}}},98:function(a){'use strict';a.exports={created:function(){var a=this;window.vm=a},data:function(){return{formInline:{user:'',region:''},tableData:[{date:'2016-05-03',name:'\u738B\u5C0F\u864E',province:'\u4E0A\u6D77',city:'\u666E\u9640\u533A',address:'\u4E0A\u6D77\u5E02\u666E\u9640\u533A\u91D1\u6C99\u6C5F\u8DEF 1518 \u5F04',zip:200333},{date:'2016-05-02',name:'\u738B\u5C0F\u864E',province:'\u4E0A\u6D77',city:'\u666E\u9640\u533A',address:'\u4E0A\u6D77\u5E02\u666E\u9640\u533A\u91D1\u6C99\u6C5F\u8DEF 1518 \u5F04',zip:200333},{date:'2016-05-04',name:'\u738B\u5C0F\u864E',province:'\u4E0A\u6D77',city:'\u666E\u9640\u533A',address:'\u4E0A\u6D77\u5E02\u666E\u9640\u533A\u91D1\u6C99\u6C5F\u8DEF 1518 \u5F04',zip:200333},{date:'2016-05-01',name:'\u738B\u5C0F\u864E',province:'\u4E0A\u6D77',city:'\u666E\u9640\u533A',address:'\u4E0A\u6D77\u5E02\u666E\u9640\u533A\u91D1\u6C99\u6C5F\u8DEF 1518 \u5F04',zip:200333}],currentPage:1,pageSize:100,total:500}},methods:{onSubmit:function(){console.log('submit!')},handleSizeChange:function(a){console.log('\u6BCF\u9875'+a+'\u6761')},handleCurrentChange:function(a){console.log('\u5F53\u524D\u9875:'+a)}}}}});
+webpackJsonp([3],{
+
+/***/ 111:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('el-breadcrumb', [_c('el-breadcrumb-item', [_vm._v("运营系统")]), _vm._v(" "), _c('el-breadcrumb-item', [_vm._v("列表页示例")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "cm-form cm-form-inline"
+  }, [_c('el-form', {
+    staticClass: "demo-form-inline",
+    attrs: {
+      "inline": true,
+      "model": _vm.formInline
+    }
+  }, [_c('el-form-item', {
+    attrs: {
+      "label": "审批人"
+    }
+  }, [_c('el-input', {
+    attrs: {
+      "placeholder": "审批人"
+    },
+    model: {
+      value: (_vm.formInline.user),
+      callback: function($$v) {
+        _vm.formInline.user = $$v
+      },
+      expression: "formInline.user"
+    }
+  })], 1), _vm._v(" "), _c('el-form-item', {
+    attrs: {
+      "label": "活动区域"
+    }
+  }, [_c('el-select', {
+    attrs: {
+      "placeholder": "活动区域"
+    },
+    model: {
+      value: (_vm.formInline.region),
+      callback: function($$v) {
+        _vm.formInline.region = $$v
+      },
+      expression: "formInline.region"
+    }
+  }, [_c('el-option', {
+    attrs: {
+      "label": "区域一",
+      "value": "shanghai"
+    }
+  }), _vm._v(" "), _c('el-option', {
+    attrs: {
+      "label": "区域二",
+      "value": "beijing"
+    }
+  })], 1)], 1), _c('el-form-item', [_c('el-button', {
+    attrs: {
+      "type": "primary"
+    },
+    on: {
+      "click": _vm.onSubmit
+    }
+  }, [_vm._v("查询")])], 1)], 1)], 1), _vm._v(" "), _c('el-table', {
+    staticStyle: {
+      "width": "100%"
+    },
+    attrs: {
+      "data": _vm.tableData,
+      "border": "",
+      "height": "200"
+    }
+  }, [_c('el-table-column', {
+    attrs: {
+      "fixed": "left",
+      "type": "selection",
+      "width": "40"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "date",
+      "label": "日期",
+      "min-width": "120"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "name",
+      "label": "姓名"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "province",
+      "label": "省份"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "city",
+      "label": "市区"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "address",
+      "label": "地址",
+      "min-width": "300"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "zip",
+      "label": "邮编"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "zip",
+      "label": "邮编"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "zip",
+      "label": "邮编"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "zip",
+      "label": "邮编"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "zip",
+      "label": "邮编"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "prop": "zip",
+      "label": "邮编"
+    }
+  }), _vm._v(" "), _c('el-table-column', {
+    attrs: {
+      "fixed": "right",
+      "label": "操作",
+      "align": "center",
+      "width": "120"
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function(scope) {
+        return [_c('el-button', {
+          attrs: {
+            "type": "text",
+            "size": "small"
+          },
+          on: {
+            "click": _vm.handleClick
+          }
+        }, [_vm._v("查看")]), _vm._v(" "), _c('el-button', {
+          attrs: {
+            "type": "text",
+            "size": "small"
+          }
+        }, [_vm._v("编辑")])]
+      }
+    }])
+  })], 1), _vm._v(" "), _c('div', {
+    staticClass: "cm-pagination-wrap"
+  }, [_c('el-pagination', {
+    attrs: {
+      "current-page": _vm.currentPage,
+      "page-sizes": [100, 200, 300, 400],
+      "page-size": _vm.pageSize,
+      "total": _vm.total,
+      "layout": "total, sizes, prev, pager, next, jumper"
+    },
+    on: {
+      "size-change": _vm.handleSizeChange,
+      "current-change": _vm.handleCurrentChange
+    }
+  })], 1)], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-49a28f54", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(91)(
+  /* script */
+  __webpack_require__(98),
+  /* template */
+  __webpack_require__(111),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "F:\\code\\@integrate-admin-vue-spa\\src\\views\\main\\list-demo.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] list-demo.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-49a28f54", Component.options)
+  } else {
+    hotAPI.reload("data-v-49a28f54", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 91:
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 98:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+    created: function created() {
+        var _this = this;
+        window.vm = _this;
+    },
+    data: function data() {
+        return {
+            formInline: {
+                user: '',
+                region: ''
+            },
+            tableData: [{
+                date: '2016-05-03',
+                name: '王小虎',
+                province: '上海',
+                city: '普陀区',
+                address: '上海市普陀区金沙江路 1518 弄',
+                zip: 200333
+            }, {
+                date: '2016-05-02',
+                name: '王小虎',
+                province: '上海',
+                city: '普陀区',
+                address: '上海市普陀区金沙江路 1518 弄',
+                zip: 200333
+            }, {
+                date: '2016-05-04',
+                name: '王小虎',
+                province: '上海',
+                city: '普陀区',
+                address: '上海市普陀区金沙江路 1518 弄',
+                zip: 200333
+            }, {
+                date: '2016-05-01',
+                name: '王小虎',
+                province: '上海',
+                city: '普陀区',
+                address: '上海市普陀区金沙江路 1518 弄',
+                zip: 200333
+            }],
+            currentPage: 1,
+            pageSize: 100,
+            total: 500
+        };
+    },
+    methods: {
+        onSubmit: function onSubmit() {
+            console.log('submit!');
+        },
+        handleSizeChange: function handleSizeChange(val) {
+            console.log('每页' + val + '条');
+        },
+        handleCurrentChange: function handleCurrentChange(val) {
+            console.log('当前页:' + val);
+        }
+    }
+};
+
+/***/ })
+
+});

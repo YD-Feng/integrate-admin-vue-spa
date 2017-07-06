@@ -27,6 +27,15 @@ module.exports = [
                 }
             },
             {
+                path: 'store-account-approve',
+                name: 'store-account-approve',
+                component: function (resolve) {
+                    require.ensure(['./../views/main/store-account-approve.vue'], function (require) {
+                        resolve(require('./../views/main/store-account-approve.vue'));
+                    }, 'store-account-approve');
+                }
+            },
+            {
                 path: 'simple-demo',
                 name: 'simple-demo',
                 component: function (resolve) {

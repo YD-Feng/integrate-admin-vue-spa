@@ -7,13 +7,14 @@
             </p>
         </div>
         <div class="menu-wrap" v-auto-height data-del-height="84">
-            <el-menu default-active="1-1-1" theme="dark" @open="handleOpen" @close="handleClose" @select="handleSelect">
+            <el-menu theme="dark" @open="handleOpen" @close="handleClose" @select="handleSelect">
 
                 <el-submenu index="1" class>
                     <template slot="title"><i class="el-icon-message"></i>下游客户</template>
                     <el-submenu index="1-1">
                         <template slot="title">客户管理</template>
                         <el-menu-item index="1-1-1" route="/main/store-account-info">帐号管理</el-menu-item>
+                        <el-menu-item index="1-1-2" route="/main/store-account-approve">帐号申请审批</el-menu-item>
                     </el-submenu>
                 </el-submenu>
 

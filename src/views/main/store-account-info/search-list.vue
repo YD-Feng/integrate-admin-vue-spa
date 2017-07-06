@@ -264,7 +264,7 @@
 
             },
             reset: function () {
-
+                this.form = _.extend({}, formDefault);
             },
             doImport: function () {
 

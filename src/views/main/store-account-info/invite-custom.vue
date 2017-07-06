@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <div class="ic-top-btn-wrap">
+    <div class="cm-inner-page">
+        <div class="top-btn-wrap">
             <el-button type="success" icon="d-arrow-left" @click="goBack">返回</el-button>
         </div>
 
-        <div class="ic-form-wrap">
+        <div class="form-wrap">
             <!--商店信息维护-->
-            <p class="ic-title">商店信息维护（资料完整性维护，便于客户顺利使用）</p>
+            <p class="title">商店信息维护（资料完整性维护，便于客户顺利使用）</p>
             <div class="cm-form-inline">
                 <el-form :inline="true"
                          :model="form"
@@ -48,12 +48,13 @@
                 </el-form>
             </div>
 
-            <div class="pb15px ic-line">
+            <div class="pb15px">
                 <el-button type="primary" style="width: 120px;" @click="submit">保存修改</el-button>
             </div>
+            <div class="line"></div>
 
             <!--邀请信息-->
-            <p class="ic-title">邀请信息</p>
+            <p class="title">邀请信息</p>
             <div class="cm-form-inline">
                 <el-form :inline="true"
                          :model="form"
@@ -72,7 +73,7 @@
                     </el-form-item>
                 </el-form>
             </div>
-            <p class="ic-title ic-title-blue">绑定码：807693615</p>
+            <p class="title title-blue">绑定码：807693615</p>
 
             <div class="pb15px">
                 <el-checkbox v-model="form.invite_by_email"> 通过邮件向客户发送邀请</el-checkbox>
@@ -132,34 +133,3 @@
         }
     };
 </script>
-
-<style>
-    .ic-top-btn-wrap{
-        text-align: right;
-        margin-top: -51px;
-        line-height: 30px;
-        padding-bottom: 5px;
-        margin-bottom: 15px;
-    }
-    .ic-form-wrap{
-        padding: 25px 25px 15px 25px;
-        border: 1px solid #e2e2e2;
-        border-radius: 4px;
-        margin-bottom: 20px;
-        background-color: #fbfbfb;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
-    }
-    .ic-title{
-        color: #009999;
-        font-size: 14px;
-        padding-bottom: 20px;
-    }
-    .ic-title-blue{
-        color: #1970a9;
-        font-weight: bold;
-    }
-    .ic-line{
-        border-bottom: 1px dashed #e2e2e2;
-        margin-bottom: 10px;
-    }
-</style>

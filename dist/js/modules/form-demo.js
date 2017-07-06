@@ -1,1 +1,486 @@
-webpackJsonp([4],{110:function(a){a.exports={render:function(){var a=this,b=a.$createElement,c=a._self._c||b;return c('div',[c('el-breadcrumb',[c('el-breadcrumb-item',[a._v('\u8FD0\u8425\u7CFB\u7EDF')]),a._v(' '),c('el-breadcrumb-item',[a._v('\u8868\u5355\u793A\u4F8B')])],1),a._v(' '),c('div',{staticClass:'cm-form'},[c('el-form',{ref:'ruleForm',staticClass:'demo-ruleForm',attrs:{model:a.ruleForm,rules:a.rules,"label-width":'100px'}},[c('el-form-item',{attrs:{label:'\u6D3B\u52A8\u540D\u79F0',prop:'name'}},[c('el-input',{model:{value:a.ruleForm.name,callback:function(b){a.ruleForm.name=b},expression:'ruleForm.name'}})],1),a._v(' '),c('el-form-item',{attrs:{label:'\u6D3B\u52A8\u533A\u57DF',prop:'region'}},[c('el-select',{attrs:{placeholder:'\u8BF7\u9009\u62E9\u6D3B\u52A8\u533A\u57DF'},model:{value:a.ruleForm.region,callback:function(b){a.ruleForm.region=b},expression:'ruleForm.region'}},[c('el-option',{attrs:{label:'\u533A\u57DF\u4E00',value:'shanghai'}}),a._v(' '),c('el-option',{attrs:{label:'\u533A\u57DF\u4E8C',value:'beijing'}})],1)],1),a._v(' '),c('el-form-item',{attrs:{label:'\u6D3B\u52A8\u65F6\u95F4',required:''}},[c('el-col',{attrs:{span:11}},[c('el-form-item',{attrs:{prop:'date1'}},[c('el-date-picker',{staticStyle:{width:'100%'},attrs:{type:'date',placeholder:'\u9009\u62E9\u65E5\u671F'},model:{value:a.ruleForm.date1,callback:function(b){a.ruleForm.date1=b},expression:'ruleForm.date1'}})],1)],1),a._v(' '),c('el-col',{staticClass:'line',staticStyle:{"text-align":'center'},attrs:{span:2}},[a._v('-')]),a._v(' '),c('el-col',{attrs:{span:11}},[c('el-form-item',{attrs:{prop:'date2'}},[c('el-time-picker',{staticStyle:{width:'100%'},attrs:{type:'fixed-time',placeholder:'\u9009\u62E9\u65F6\u95F4'},model:{value:a.ruleForm.date2,callback:function(b){a.ruleForm.date2=b},expression:'ruleForm.date2'}})],1)],1)],1),a._v(' '),c('el-form-item',{attrs:{label:'\u5373\u65F6\u914D\u9001',prop:'delivery'}},[c('el-switch',{attrs:{"on-text":'',"off-text":''},model:{value:a.ruleForm.delivery,callback:function(b){a.ruleForm.delivery=b},expression:'ruleForm.delivery'}})],1),a._v(' '),c('el-form-item',{attrs:{label:'\u6D3B\u52A8\u6027\u8D28',prop:'type'}},[c('el-checkbox-group',{model:{value:a.ruleForm.type,callback:function(b){a.ruleForm.type=b},expression:'ruleForm.type'}},[c('el-checkbox',{attrs:{label:'\u7F8E\u98DF/\u9910\u5385\u7EBF\u4E0A\u6D3B\u52A8',name:'type'}}),a._v(' '),c('el-checkbox',{attrs:{label:'\u5730\u63A8\u6D3B\u52A8',name:'type'}}),a._v(' '),c('el-checkbox',{attrs:{label:'\u7EBF\u4E0B\u4E3B\u9898\u6D3B\u52A8',name:'type'}}),a._v(' '),c('el-checkbox',{attrs:{label:'\u5355\u7EAF\u54C1\u724C\u66DD\u5149',name:'type'}})],1)],1),a._v(' '),c('el-form-item',{attrs:{label:'\u7279\u6B8A\u8D44\u6E90',prop:'resource'}},[c('el-radio-group',{model:{value:a.ruleForm.resource,callback:function(b){a.ruleForm.resource=b},expression:'ruleForm.resource'}},[c('el-radio',{attrs:{label:'1'}},[a._v('\u7EBF\u4E0A\u54C1\u724C\u5546\u8D5E\u52A9')]),a._v(' '),c('el-radio',{attrs:{label:'2'}},[a._v('\u7EBF\u4E0B\u573A\u5730\u514D\u8D39')])],1)],1),a._v(' '),c('el-form-item',{attrs:{label:'\u6D3B\u52A8\u5F62\u5F0F',prop:'desc'}},[c('el-input',{attrs:{type:'textarea',autosize:{minRows:4,maxRows:8}},model:{value:a.ruleForm.desc,callback:function(b){a.ruleForm.desc=b},expression:'ruleForm.desc'}})],1),a._v(' '),c('el-form-item',[c('el-button',{attrs:{type:'primary'},on:{click:function(){a.submitForm('ruleForm')}}},[a._v('\u7ACB\u5373\u521B\u5EFA')]),a._v(' '),c('el-button',{on:{click:function(){a.resetForm('ruleForm')}}},[a._v('\u91CD\u7F6E')])],1)],1)],1)],1)},staticRenderFns:[]},a.exports.render._withStripped=!0,!1},33:function(a,b,c){var d=c(91)(c(97),c(110),null,null,null);d.options.__file='F:\\code\\@integrate-admin-vue-spa\\src\\views\\main\\form-demo.vue',d.esModule&&Object.keys(d.esModule).some(function(a){return'default'!==a&&'__'!==a.substr(0,2)})&&console.error('named exports are not supported in *.vue files.'),d.options.functional&&console.error('[vue-loader] form-demo.vue: functional components are not supported with templates, they should use render functions.'),!1,a.exports=d.exports},91:function(a){a.exports=function(a,b,c,d,e){var f,g=a=a||{},h=typeof a.default;('object'==h||'function'==h)&&(f=a,g=a.default);var i='function'==typeof g?g.options:g;b&&(i.render=b.render,i.staticRenderFns=b.staticRenderFns),d&&(i._scopeId=d);var j;if(e?(j=function(a){a=a||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,a||'undefined'==typeof __VUE_SSR_CONTEXT__||(a=__VUE_SSR_CONTEXT__),c&&c.call(this,a),a&&a._registeredComponents&&a._registeredComponents.add(e)},i._ssrRegister=j):c&&(j=c),j){var k=i.functional,l=k?i.render:i.beforeCreate;k?i.render=function(a,b){return j.call(b),l(a,b)}:i.beforeCreate=l?[].concat(l,j):[j]}return{esModule:f,exports:g,options:i}}},97:function(a){'use strict';a.exports={created:function(){var a=this;window.vm=a},data:function(){return{ruleForm:{name:'',region:'',date1:'',date2:'',delivery:!1,type:[],resource:'',desc:''},rules:{name:[{required:!0,message:'\u8BF7\u8F93\u5165\u6D3B\u52A8\u540D\u79F0',trigger:'blur'},{min:3,max:5,message:'\u957F\u5EA6\u5728 3 \u5230 5 \u4E2A\u5B57\u7B26',trigger:'blur'}],region:[{required:!0,message:'\u8BF7\u9009\u62E9\u6D3B\u52A8\u533A\u57DF',trigger:'change'}],date1:[{type:'date',required:!0,message:'\u8BF7\u9009\u62E9\u65E5\u671F',trigger:'change'}],date2:[{type:'date',required:!0,message:'\u8BF7\u9009\u62E9\u65F6\u95F4',trigger:'change'}],type:[{type:'array',required:!0,message:'\u8BF7\u81F3\u5C11\u9009\u62E9\u4E00\u4E2A\u6D3B\u52A8\u6027\u8D28',trigger:'change'}],resource:[{required:!0,message:'\u8BF7\u9009\u62E9\u6D3B\u52A8\u8D44\u6E90',trigger:'change'}],desc:[{required:!0,message:'\u8BF7\u586B\u5199\u6D3B\u52A8\u5F62\u5F0F',trigger:'blur'}]}}},methods:{submitForm:function(a){this.$refs[a].validate(function(a){return a?void this.$alert('submit!'):(console.log('error submit!!'),!1)})},resetForm:function(a){this.$refs[a].resetFields()}}}}});
+webpackJsonp([4],{
+
+/***/ 110:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('el-breadcrumb', [_c('el-breadcrumb-item', [_vm._v("运营系统")]), _vm._v(" "), _c('el-breadcrumb-item', [_vm._v("表单示例")])], 1), _vm._v(" "), _c('div', {
+    staticClass: "cm-form"
+  }, [_c('el-form', {
+    ref: "ruleForm",
+    staticClass: "demo-ruleForm",
+    attrs: {
+      "model": _vm.ruleForm,
+      "rules": _vm.rules,
+      "label-width": "100px"
+    }
+  }, [_c('el-form-item', {
+    attrs: {
+      "label": "活动名称",
+      "prop": "name"
+    }
+  }, [_c('el-input', {
+    model: {
+      value: (_vm.ruleForm.name),
+      callback: function($$v) {
+        _vm.ruleForm.name = $$v
+      },
+      expression: "ruleForm.name"
+    }
+  })], 1), _vm._v(" "), _c('el-form-item', {
+    attrs: {
+      "label": "活动区域",
+      "prop": "region"
+    }
+  }, [_c('el-select', {
+    attrs: {
+      "placeholder": "请选择活动区域"
+    },
+    model: {
+      value: (_vm.ruleForm.region),
+      callback: function($$v) {
+        _vm.ruleForm.region = $$v
+      },
+      expression: "ruleForm.region"
+    }
+  }, [_c('el-option', {
+    attrs: {
+      "label": "区域一",
+      "value": "shanghai"
+    }
+  }), _vm._v(" "), _c('el-option', {
+    attrs: {
+      "label": "区域二",
+      "value": "beijing"
+    }
+  })], 1)], 1), _vm._v(" "), _c('el-form-item', {
+    attrs: {
+      "label": "活动时间",
+      "required": ""
+    }
+  }, [_c('el-col', {
+    attrs: {
+      "span": 11
+    }
+  }, [_c('el-form-item', {
+    attrs: {
+      "prop": "date1"
+    }
+  }, [_c('el-date-picker', {
+    staticStyle: {
+      "width": "100%"
+    },
+    attrs: {
+      "type": "date",
+      "placeholder": "选择日期"
+    },
+    model: {
+      value: (_vm.ruleForm.date1),
+      callback: function($$v) {
+        _vm.ruleForm.date1 = $$v
+      },
+      expression: "ruleForm.date1"
+    }
+  })], 1)], 1), _vm._v(" "), _c('el-col', {
+    staticClass: "line",
+    staticStyle: {
+      "text-align": "center"
+    },
+    attrs: {
+      "span": 2
+    }
+  }, [_vm._v("-")]), _vm._v(" "), _c('el-col', {
+    attrs: {
+      "span": 11
+    }
+  }, [_c('el-form-item', {
+    attrs: {
+      "prop": "date2"
+    }
+  }, [_c('el-time-picker', {
+    staticStyle: {
+      "width": "100%"
+    },
+    attrs: {
+      "type": "fixed-time",
+      "placeholder": "选择时间"
+    },
+    model: {
+      value: (_vm.ruleForm.date2),
+      callback: function($$v) {
+        _vm.ruleForm.date2 = $$v
+      },
+      expression: "ruleForm.date2"
+    }
+  })], 1)], 1)], 1), _vm._v(" "), _c('el-form-item', {
+    attrs: {
+      "label": "即时配送",
+      "prop": "delivery"
+    }
+  }, [_c('el-switch', {
+    attrs: {
+      "on-text": "",
+      "off-text": ""
+    },
+    model: {
+      value: (_vm.ruleForm.delivery),
+      callback: function($$v) {
+        _vm.ruleForm.delivery = $$v
+      },
+      expression: "ruleForm.delivery"
+    }
+  })], 1), _vm._v(" "), _c('el-form-item', {
+    attrs: {
+      "label": "活动性质",
+      "prop": "type"
+    }
+  }, [_c('el-checkbox-group', {
+    model: {
+      value: (_vm.ruleForm.type),
+      callback: function($$v) {
+        _vm.ruleForm.type = $$v
+      },
+      expression: "ruleForm.type"
+    }
+  }, [_c('el-checkbox', {
+    attrs: {
+      "label": "美食/餐厅线上活动",
+      "name": "type"
+    }
+  }), _vm._v(" "), _c('el-checkbox', {
+    attrs: {
+      "label": "地推活动",
+      "name": "type"
+    }
+  }), _vm._v(" "), _c('el-checkbox', {
+    attrs: {
+      "label": "线下主题活动",
+      "name": "type"
+    }
+  }), _vm._v(" "), _c('el-checkbox', {
+    attrs: {
+      "label": "单纯品牌曝光",
+      "name": "type"
+    }
+  })], 1)], 1), _vm._v(" "), _c('el-form-item', {
+    attrs: {
+      "label": "特殊资源",
+      "prop": "resource"
+    }
+  }, [_c('el-radio-group', {
+    model: {
+      value: (_vm.ruleForm.resource),
+      callback: function($$v) {
+        _vm.ruleForm.resource = $$v
+      },
+      expression: "ruleForm.resource"
+    }
+  }, [_c('el-radio', {
+    attrs: {
+      "label": "1"
+    }
+  }, [_vm._v("线上品牌商赞助")]), _vm._v(" "), _c('el-radio', {
+    attrs: {
+      "label": "2"
+    }
+  }, [_vm._v("线下场地免费")])], 1)], 1), _vm._v(" "), _c('el-form-item', {
+    attrs: {
+      "label": "活动形式",
+      "prop": "desc"
+    }
+  }, [_c('el-input', {
+    attrs: {
+      "type": "textarea",
+      "autosize": {
+        minRows: 4,
+        maxRows: 8
+      }
+    },
+    model: {
+      value: (_vm.ruleForm.desc),
+      callback: function($$v) {
+        _vm.ruleForm.desc = $$v
+      },
+      expression: "ruleForm.desc"
+    }
+  })], 1), _vm._v(" "), _c('el-form-item', [_c('el-button', {
+    attrs: {
+      "type": "primary"
+    },
+    on: {
+      "click": function($event) {
+        _vm.submitForm('ruleForm')
+      }
+    }
+  }, [_vm._v("立即创建")]), _vm._v(" "), _c('el-button', {
+    on: {
+      "click": function($event) {
+        _vm.resetForm('ruleForm')
+      }
+    }
+  }, [_vm._v("重置")])], 1)], 1)], 1)], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-2f5fa6f0", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var Component = __webpack_require__(91)(
+  /* script */
+  __webpack_require__(97),
+  /* template */
+  __webpack_require__(110),
+  /* styles */
+  null,
+  /* scopeId */
+  null,
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "F:\\code\\@integrate-admin-vue-spa\\src\\views\\main\\form-demo.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] form-demo.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2f5fa6f0", Component.options)
+  } else {
+    hotAPI.reload("data-v-2f5fa6f0", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 91:
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 97:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+module.exports = {
+    created: function created() {
+        var _this = this;
+        window.vm = _this;
+    },
+    data: function data() {
+        return {
+            ruleForm: {
+                name: '',
+                region: '',
+                date1: '',
+                date2: '',
+                delivery: false,
+                type: [],
+                resource: '',
+                desc: ''
+            },
+            rules: {
+                name: [{ required: true, message: '请输入活动名称', trigger: 'blur' }, { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }],
+                region: [{ required: true, message: '请选择活动区域', trigger: 'change' }],
+                date1: [{ type: 'date', required: true, message: '请选择日期', trigger: 'change' }],
+                date2: [{ type: 'date', required: true, message: '请选择时间', trigger: 'change' }],
+                type: [{ type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }],
+                resource: [{ required: true, message: '请选择活动资源', trigger: 'change' }],
+                desc: [{ required: true, message: '请填写活动形式', trigger: 'blur' }]
+            }
+        };
+    },
+    methods: {
+        submitForm: function submitForm(formName) {
+            this.$refs[formName].validate(function (valid) {
+                if (valid) {
+                    this.$alert('submit!');
+                } else {
+                    console.log('error submit!!');
+                    return false;
+                }
+            });
+        },
+        resetForm: function resetForm(formName) {
+            this.$refs[formName].resetFields();
+        }
+    }
+};
+
+/***/ })
+
+});

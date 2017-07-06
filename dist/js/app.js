@@ -1,1 +1,343 @@
-webpackJsonp([6],{31:function(a,b,c){'use strict';c(82),c(83);var d=c(2),e=c(18),f=c(20),g=c(19),h=c(17),i=c(16),j={count:0};d.use(e),d.use(f),d.use(h),d.use(i),d.http.options.emulateJSON=!0,window.router=new e({saveScrollPosition:!0,transitionOnLoad:!0,routes:c(59)}),router.beforeEach(function(a,b,c){c()}),window.store=new f.Store({modules:{tips:c(63),loading:c(62),header:c(61),footer:c(60)},strict:!1,middlewares:[g()]}),d.http.interceptors.push(function(a,b){'undefined'==typeof j[a.url]?(j[a.url]=a,++j.count):j[a.url]=a,0<j.count,b(function(b){delete j[a.url],--j.count,0==j.count,200!=b.body.code})}),d.directive('autoHeight',{bind:function(a){var b=a.dataset.delHeight||0;a.style.height=window.innerHeight-b+'px',a.style['max-height']=window.innerHeight-b+'px',window.onresize=function(){a.style.height=window.innerHeight-b+'px',a.style['max-height']=window.innerHeight-b+'px'}}}),window.app=new d({router:router,store:store}).$mount('#app')},59:function(a,b,c){'use strict';a.exports=[{path:'/',name:'main',component:function(a){c.e(0).then(function(){a(c(8))}.bind(null,c)).catch(c.oe)}},{path:'/main',name:'main',component:function(a){c.e(0).then(function(){a(c(8))}.bind(null,c)).catch(c.oe)},children:[{path:'store-account-info',name:'store-account-info',component:function(a){c.e(1).then(function(){a(c(36))}.bind(null,c)).catch(c.oe)}},{path:'simple-demo',name:'simple-demo',component:function(a){c.e(2).then(function(){a(c(35))}.bind(null,c)).catch(c.oe)}},{path:'form-demo',name:'form-demo',component:function(a){c.e(4).then(function(){a(c(33))}.bind(null,c)).catch(c.oe)}},{path:'list-demo',name:'list-demo',component:function(a){c.e(3).then(function(){a(c(34))}.bind(null,c)).catch(c.oe)}}]}]},60:function(a){'use strict';a.exports={state:{activeTab:0},mutations:{SET_TAB_ACTIVE:function(a,b){a.activeTab=b}},actions:{setTabActive:function(a,b){a.commit('SET_TAB_ACTIVE',b)}}}},61:function(a){'use strict';a.exports={state:{headerConfig:{title:null,leftBtnCls:'icon-back',hideLeftBtn:!1,rightBtnCls:'icon-home',hideRightBtn:!1}},mutations:{SET_TITLE:function(a,b){a.headerConfig.title=b},SET_CONFIG:function(a,b){for(var c in b)'undefined'!=typeof a.headerConfig[c]&&(a.headerConfig[c]=b[c])}},actions:{setTitle:function(a,b){a.commit('SET_TITLE',b)},setConfig:function(a,b){a.commit('SET_CONFIG',b)}}}},62:function(a){'use strict';a.exports={state:{isShow:!1},mutations:{SHOW_LOADING:function(a){a.isShow=!0},HIDE_LOADING:function(a){a.isShow=!1}},actions:{showLoading:function(a){a.commit('SHOW_LOADING')},hideLoading:function(a){a.commit('HIDE_LOADING')}}}},63:function(a){'use strict';var b=null;a.exports={state:{msg:'',newPlayerTips:'',costScore:''},mutations:{SET_TIPS_MSG:function(a,c){a.msg=c,clearTimeout(b),b=setTimeout(function(){a.msg=''},3e3)},SET_NEW_PLAYER_TIPS:function(a,b){a.newPlayerTips=b},SET_COST_SCORE:function(a,b){a.costScore=b}},actions:{showTips:function(a,b){a.commit('SET_TIPS_MSG',b)},setNewPlayerTips:function(a,b){a.commit('SET_NEW_PLAYER_TIPS',b)},setCostScore:function(a,b){a.commit('SET_COST_SCORE',b)}}}},82:function(){},83:function(){},88:function(a,b,c){a.exports=c(31)}},[88]);
+webpackJsonp([6],{
+
+/***/ 31:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+//加载初始化样式
+
+__webpack_require__(82);
+__webpack_require__(83);
+
+var Vue = __webpack_require__(2),
+    VueRouter = __webpack_require__(18),
+    Vuex = __webpack_require__(20),
+    VuexLogger = __webpack_require__(19),
+    VueResource = __webpack_require__(17),
+    ElementUI = __webpack_require__(16),
+    xhrPool = {
+    count: 0
+};
+
+Vue.use(VueRouter);
+Vue.use(Vuex);
+Vue.use(VueResource);
+Vue.use(ElementUI);
+
+Vue.http.options.emulateJSON = true;
+
+//实例化 vue-router
+window.router = new VueRouter({
+    saveScrollPosition: true,
+    transitionOnLoad: true,
+    routes: __webpack_require__(59)
+});
+
+router.beforeEach(function (to, from, next) {
+    /*if (to.name != 'login' && to.name != 'forgetPwd' && !localStorage.getItem('hasLogin')) {
+        router.push({
+            path: '/login'
+        });
+    } else {
+        next();
+    }*/
+
+    next();
+});
+
+window.store = new Vuex.Store({
+    modules: {
+        tips: __webpack_require__(63),
+        loading: __webpack_require__(62),
+        header: __webpack_require__(61),
+        footer: __webpack_require__(60)
+    },
+    strict: false,
+    middlewares: [VuexLogger()]
+});
+
+Vue.http.interceptors.push(function (request, next) {
+    if (typeof xhrPool[request.url] == 'undefined') {
+        xhrPool[request.url] = request;
+        xhrPool['count'] = xhrPool['count'] + 1;
+    } else {
+        xhrPool[request.url] = request;
+    }
+
+    if (xhrPool['count'] > 0) {
+        //window.store.dispatch('showLoading');
+    }
+
+    next(function (response) {
+        delete xhrPool[request.url];
+        xhrPool['count'] = xhrPool['count'] - 1;
+
+        if (xhrPool['count'] == 0) {
+            //window.store.dispatch('hideLoading');
+        }
+
+        if (response.body.code != 200) {
+            //window.store.dispatch('showTips', response.body.msg);
+        }
+    });
+});
+
+Vue.directive('autoHeight', {
+    bind: function bind(el) {
+        var delHeight = el.dataset.delHeight || 0;
+        el.style['height'] = window.innerHeight - delHeight + 'px';
+        el.style['max-height'] = window.innerHeight - delHeight + 'px';
+
+        window.onresize = function () {
+            el.style['height'] = window.innerHeight - delHeight + 'px';
+            el.style['max-height'] = window.innerHeight - delHeight + 'px';
+        };
+    }
+});
+
+window.app = new Vue({
+    router: router,
+    store: store
+}).$mount('#app');
+
+/***/ }),
+
+/***/ 59:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = [{
+    path: '/',
+    name: 'main',
+    component: function component(resolve) {
+        __webpack_require__.e/* require.ensure */(0).then((function (require) {
+            resolve(__webpack_require__(8));
+        }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    }
+}, {
+    path: '/main',
+    name: 'main',
+    component: function component(resolve) {
+        __webpack_require__.e/* require.ensure */(0).then((function (require) {
+            resolve(__webpack_require__(8));
+        }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+    },
+    children: [{
+        path: 'store-account-info',
+        name: 'store-account-info',
+        component: function component(resolve) {
+            __webpack_require__.e/* require.ensure */(1).then((function (require) {
+                resolve(__webpack_require__(36));
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+        }
+    }, {
+        path: 'store-account-approve',
+        name: 'store-account-approve',
+        component: function component(resolve) {
+            __webpack_require__.e/* require.ensure */(8).then((function (require) {
+                resolve(__webpack_require__(118));
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+        }
+    }, {
+        path: 'simple-demo',
+        name: 'simple-demo',
+        component: function component(resolve) {
+            __webpack_require__.e/* require.ensure */(2).then((function (require) {
+                resolve(__webpack_require__(35));
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+        }
+    }, {
+        path: 'form-demo',
+        name: 'form-demo',
+        component: function component(resolve) {
+            __webpack_require__.e/* require.ensure */(4).then((function (require) {
+                resolve(__webpack_require__(33));
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+        }
+    }, {
+        path: 'list-demo',
+        name: 'list-demo',
+        component: function component(resolve) {
+            __webpack_require__.e/* require.ensure */(3).then((function (require) {
+                resolve(__webpack_require__(34));
+            }).bind(null, __webpack_require__)).catch(__webpack_require__.oe);
+        }
+    }]
+}];
+
+/***/ }),
+
+/***/ 60:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var timeoutObj = null;
+
+module.exports = {
+    state: {
+        activeTab: 0
+    },
+    mutations: {
+        SET_TAB_ACTIVE: function SET_TAB_ACTIVE(state, tabIndex) {
+            state.activeTab = tabIndex;
+        }
+    },
+    actions: {
+        setTabActive: function setTabActive(store, tabIndex) {
+            store.commit('SET_TAB_ACTIVE', tabIndex);
+        }
+    }
+};
+
+/***/ }),
+
+/***/ 61:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    state: {
+        headerConfig: {
+            title: null,
+            leftBtnCls: 'icon-back',
+            hideLeftBtn: false,
+            rightBtnCls: 'icon-home',
+            hideRightBtn: false
+        }
+    },
+    mutations: {
+        SET_TITLE: function SET_TITLE(state, title) {
+            state.headerConfig.title = title;
+        },
+        SET_CONFIG: function SET_CONFIG(state, config) {
+            for (var name in config) {
+                if (typeof state.headerConfig[name] != 'undefined') {
+                    state.headerConfig[name] = config[name];
+                }
+            }
+        }
+    },
+    actions: {
+        setTitle: function setTitle(store, title) {
+            store.commit('SET_TITLE', title);
+        },
+
+        setConfig: function setConfig(store, config) {
+            store.commit('SET_CONFIG', config);
+        }
+    }
+};
+
+/***/ }),
+
+/***/ 62:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+    state: {
+        isShow: false
+    },
+    mutations: {
+        SHOW_LOADING: function SHOW_LOADING(state) {
+            state.isShow = true;
+        },
+        HIDE_LOADING: function HIDE_LOADING(state) {
+            state.isShow = false;
+        }
+    },
+    actions: {
+        showLoading: function showLoading(store) {
+            store.commit('SHOW_LOADING');
+        },
+
+        hideLoading: function hideLoading(store) {
+            store.commit('HIDE_LOADING');
+        }
+    }
+};
+
+/***/ }),
+
+/***/ 63:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var timeoutObj = null;
+
+module.exports = {
+    state: {
+        msg: '',
+        newPlayerTips: '',
+        costScore: ''
+    },
+    mutations: {
+        SET_TIPS_MSG: function SET_TIPS_MSG(state, msg) {
+            state.msg = msg;
+
+            clearTimeout(timeoutObj);
+            timeoutObj = setTimeout(function () {
+                state.msg = '';
+            }, 3000);
+        },
+
+        SET_NEW_PLAYER_TIPS: function SET_NEW_PLAYER_TIPS(state, tips) {
+            state.newPlayerTips = tips;
+        },
+
+        SET_COST_SCORE: function SET_COST_SCORE(state, score) {
+            state.costScore = score;
+        }
+    },
+    actions: {
+        showTips: function showTips(store, msg) {
+            store.commit('SET_TIPS_MSG', msg);
+        },
+
+        setNewPlayerTips: function setNewPlayerTips(store, tips) {
+            store.commit('SET_NEW_PLAYER_TIPS', tips);
+        },
+
+        setCostScore: function setCostScore(store, score) {
+            store.commit('SET_COST_SCORE', score);
+        }
+    }
+};
+
+/***/ }),
+
+/***/ 82:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 83:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 88:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(31);
+
+
+/***/ })
+
+},[88]);
