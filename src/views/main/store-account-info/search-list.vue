@@ -176,8 +176,7 @@
 </template>
 
 <script>
-    //var _ = require('underscore');
-    import _ from 'underscore';
+    var _ = require('underscore');
 
     const formDefault = {
         local_erp_code: '',
