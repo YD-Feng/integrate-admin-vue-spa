@@ -167,7 +167,7 @@ html,body{
         font-size: 12px;
         line-height: 30px;
         padding-bottom: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         border-bottom: 1px solid #e2e2e2;
     }
 }
@@ -187,8 +187,23 @@ html,body{
 
 .cm-form-inline{
     width: 100%;
-    .el-form--inline .el-form-item{
-        margin-right: 25px;
+    .search-form {
+        font-size: 0;
+        padding: 25px 25px 10px 25px;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        background-color: #fbfbfb;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+    }
+    .el-form {
+        .el-form-item{
+            margin-right: 25px;
+            margin-bottom: 15px;
+        }
+        .el-form-item__label{
+            padding-bottom: 4px;
+        }
     }
 }
 

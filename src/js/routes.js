@@ -18,6 +18,15 @@ module.exports = [
         },
         children: [
             {
+                path: 'store-account-info',
+                name: 'store-account-info',
+                component: function (resolve) {
+                    require.ensure(['./../views/main/store-account-info.vue'], function (require) {
+                        resolve(require('./../views/main/store-account-info.vue'));
+                    }, 'store-account-info');
+                }
+            },
+            {
                 path: 'simple-demo',
                 name: 'simple-demo',
                 component: function (resolve) {
